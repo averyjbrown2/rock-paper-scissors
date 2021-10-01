@@ -33,6 +33,15 @@
                 console.log("computer chose scissors");
             }           
             
+            //compare userChoice of rock with computerChoice options
+            if (userChoice === options[0] && computerChoice === 0) {
+                alert("You have tied");
+            } else if (userChoice === options[0] && computerChoice === 1) {
+                alert("You have lost; paper beats rock");
+            } else if (userChoice === options[0] && computerChoice === 2) {
+                alert("You have won; rock beats scissors");
+            }
+
         }
 
 
