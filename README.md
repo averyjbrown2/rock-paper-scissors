@@ -44,8 +44,7 @@ averybgcoding@gmail.com
 
 
 
-### Images  
-![README VS Code](./Assets/image1.png)    
+### Preview  
 
 https://user-images.githubusercontent.com/72925420/135579546-72634e49-8944-4aeb-bded-3ad0306a4e56.mp4
 
