@@ -1,75 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
 </head>
+
 <body>
     <script>
-         //create array of options
-         //indexes: rock = 0, paper = 1, scissors = 2
-         const options = ["rock", "paper", "scissors"];
+        //create array of options
+        //indexes: rock = 0, paper = 1, scissors = 2
+        const options = ["rock", "paper", "scissors"];
 
-         //create tally of wins, losses, and ties
-         let wins = 0;
-         let losses = 0;
-         let ties = 0;
-        
-         
-         //create for loop for choices
-         for (var i = 0; i < 5; i++) {
-             //create randomizer for computer choices 
-             computerChoice = Math.floor(Math.random()*3);
-             console.log(computerChoice);
-             //create variables for user choices
-             let userChoice = prompt("Choose rock, paper, or scissors");
-             
+        //create tally of wins, losses, and ties
+        let wins = 0;
+        let losses = 0;
+        let ties = 0;
+
+        //create for loop for choices
+        for (var i = 0; i < 5; i++) {
+            //create randomizer for computer choices 
+            computerChoice = Math.floor(Math.random() * 3);
+            console.log(computerChoice);
+            //create variables for user choices
+            let userChoice = prompt("Choose rock, paper, or scissors");
+
             //let player know computerChoices
             if (computerChoice === 0) {
                 alert("Computer chose rock");
                 console.log("computer chose rock");
             } else if (computerChoice === 1) {
-                alert("Computer chose paper"); 
+                alert("Computer chose paper");
                 console.log("computer chose paper");
             } else if (computerChoice === 2) {
                 alert("Computer chose scissors");
                 console.log("computer chose scissors");
-            }           
-            
+            }
+
             //compare userChoice of rock with computerChoice options
             if (userChoice === options[0] && computerChoice === 0) {
                 alert("You have tied");
+                ties++;
             } else if (userChoice === options[0] && computerChoice === 1) {
                 alert("You have lost; paper beats rock");
+                losses++;
             } else if (userChoice === options[0] && computerChoice === 2) {
                 alert("You have won; rock beats scissors");
+                wins++;
             }
 
             //compare userChoice of paper with computerChoice options
             if (userChoice === options[1] && computerChoice === 0) {
                 alert("You have won; paper beats rock");
+                wins++;
             } else if (userChoice === options[1] && computerChoice === 1) {
                 alert("You have tied");
+                ties++;
             } else if (userChoice === options[1] && computerChoice === 2) {
                 alert("You have lost; scissors beat paper");
-        }
+                losses++;
+            }
 
-        if (userChoice === options[2] && computerChoice === 0) {
+            if (userChoice === options[2] && computerChoice === 0) {
                 alert("You have lost; rock beats scissors");
+                losses++;
             } else if (userChoice === options[2] && computerChoice === 1) {
                 alert("You have won; scissors beat paper");
+                wins++;
             } else if (userChoice === options[2] && computerChoice === 2) {
                 alert("You have tied");
+                ties++;
+            }
+
+
+            alert("wins: " + wins + "losses: " + losses + "ties: " + ties )
         }
-
-
-    }
 
 
     </script>
 
 
 </body>
+
 </html>
