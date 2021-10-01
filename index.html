@@ -12,10 +12,18 @@
          //indexes: rock = 0, paper = 1, scissors = 2
          const options = ["rock", "paper", "scissors"];
         
-         //create randomizer for computer choices for 0-2
-         computerChoices = Math.floor(Math.random()*3);
-
-
+         
+         //create for loop for choices
+         for (var i = 0; i < 5; i++) {
+             //create randomizer for computer choices 
+             computerChoices = Math.floor(Math.random()*3);
+             console.log(computerChoices);
+             //create variables for user choices
+             let userChoice = prompt("Choose rock, paper, or scissors");
+             
+               
+            
+        }
 
 
 
