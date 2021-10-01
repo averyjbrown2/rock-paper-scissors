@@ -42,6 +42,13 @@
                 alert("You have won; rock beats scissors");
             }
 
+            //compare userChoice of paper with computerChoice options
+            if (userChoice === options[1] && computerChoice === 0) {
+                alert("You have won; paper beats rock");
+            } else if (userChoice === options[1] && computerChoice === 1) {
+                alert("You have tied");
+            } else if (userChoice === options[1] && computerChoice === 2) {
+                alert("You have lost; scissors beat paper");
         }
 
 
